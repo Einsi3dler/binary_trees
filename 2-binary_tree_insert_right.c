@@ -5,7 +5,7 @@
  * @value: this contains the value to
  * Return: returns a pointer to the parent address
  */
-binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *newNode;
 
@@ -27,9 +27,9 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	
 	if (parent->left != NULL)
 	{
-		newNode -> left = parent->left;
-		parent->left->parent = newNode;
+		newNode -> right = parent->left;
+		parent->right->parent = newNode;
 	}
-	parent->left = newNode;
+	parent->right = newNode;
 	return (newNode);
 }
