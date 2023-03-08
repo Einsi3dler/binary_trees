@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_delete - this deletes an entire tree 
+ * binary_tree_delete - this deletes an entire tree
  * @tree: root of the tree
  * Return: returns null
  */
