@@ -3,7 +3,7 @@
  * max - finds the max of two numbers
  * @a: an int
  * @b: an int
- * Returns: returns the biggest number
+ * Return: returns the biggest number
  */
 size_t max(size_t a, size_t b)
 {
@@ -18,13 +18,14 @@ size_t max(size_t a, size_t b)
 }
 
 /**
- * binary_tree_inorder - goes through a binary tree using in-order traversal
- * @tree: a pointer to the root node of the tree to traverse
- * Return - returns none
+ * binary_tree_height - measures a binary tree height
+ * @tree: a pointer to the root node of the tree
+ * Return: returns the size of the binary tree
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t left, right;
+
 	if (tree && tree->left)
 	{
 		left = binary_tree_height(tree->left) + 1;
@@ -41,5 +42,5 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	{
 		right = 0;
 	}
-	return max(left, right);
+	return (max(left, right));
 }

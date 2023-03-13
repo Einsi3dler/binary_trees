@@ -2,7 +2,7 @@
 /**
  * binary_tree_is_root - Checks if a node is a parent
  * @node: the node to be checked
- * Returns: return 1 if node is a root, otherwise 0
+ * Return: return 1 if node is a root, otherwise 0
  */
 int binary_tree_is_root(const binary_tree_t *node)
 {

@@ -2,7 +2,7 @@
 /**
  * binary_tree_depth - goes through a binary tree using in-order traversal
  * @tree: a pointer to the root node of the tree to traverse
- * Return - returns none
+ * Return: returns the depth of the tree
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
@@ -13,10 +13,10 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 		return (0);
 	}
 	count = 0;
-	while(tree->parent)
+	while (tree->parent)
 	{
 		tree = tree->parent;
-		count ++;
+		count++;
 	}
 
 	return (count);

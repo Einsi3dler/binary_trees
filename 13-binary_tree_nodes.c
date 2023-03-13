@@ -1,13 +1,13 @@
 #include "binary_trees.h"
 /**
- * binary_tree_size - goes through a binary tree using in-order traversal
+ * binary_tree_nodes - counts numbers of nodes on a binary tree
  * @tree: a pointer to the root node of the tree to traverse
- * Return - returns none
+ * Return: returns the number of nodes
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
-	size_t node; 
-	
+	size_t node;
+
 	node = 0;
 	if (tree == NULL)
 	{
@@ -17,5 +17,6 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 	{
 		node = 1;
 	}
-	return binary_tree_nodes(tree->left) + node + binary_tree_nodes(tree->right);
+	return (binary_tree_nodes(tree->left)
+			+ node + binary_tree_nodes(tree->right));
 }
